@@ -4,7 +4,7 @@ import viteLogo from '../../../public/vite.svg'
 import './home.scss'
 import { Link } from 'react-router-dom'
 
-function App() {
+function Home() {
   const [count, setCount] = useState(0)
 
   return (
@@ -30,9 +30,8 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Link to="/apartment/10" className='home__appCard'> Titre de la Location</Link>
-
     </>
   )
 }
 
-export default App
+export default Home
