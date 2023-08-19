@@ -1,0 +1,33 @@
+
+.footer-kasa {
+    width: 100%;
+    margin-top: 50px;
+    color: white;
+    background-color: black;
+    padding: 65px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    &__link {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &__logo {
+            width: 122px;
+            height: 40px;
+            object-fit: cover;
+            filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(170%) contrast(110%);
+        }
+    }
+    &__copyright {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        margin: 0;
+    }
+}
