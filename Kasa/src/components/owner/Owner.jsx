@@ -1,10 +1,12 @@
 import './owner.scss';
 
 
-function Owner() {
+function Owner({ host }) {
     return (
         <div className='owner'>
-            <h3>Host</h3>
+            {console.log(host)}
+            <h3>{host.name}</h3>
+            <img src={host.picture} alt={'picture of' + host.name} />
         </div>
     )
 }

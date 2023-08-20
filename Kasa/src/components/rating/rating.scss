@@ -1,0 +1,8 @@
+
+.rating {
+    &__star{
+        &-grey {
+            filter: invert(97%) sepia(2%) saturate(6%) hue-rotate(327deg) brightness(94%) contrast(95%);
+        }
+    }
+}

@@ -1,15 +1,15 @@
-import './rating.scss'
+import './rating.scss';
+import star from '../../assets/star.svg';
 
-function Rating() {
+function Rating({ rating }) {
+    const range = [1, 2, 3, 4, 5];
     return (
         <div className='rating'>
-            <div className='rating__stars'>
-                <div className='rating__stars__star'></div>
-            </div>
-            <div className='rating__comments'>
-                <div className='rating__comments__number'>Rating</div>
-                <div className='rating__comments__text'>reviews</div>
-            </div>
+            {range.map((rangeElem) =>
+				rating >= rangeElem ? (
+					<img key={rangeElem.toString()} className='rating__star-red' src={star}/>
+				) : <img key={rangeElem.toString()} className='rating__star-grey' src={star}/>
+			)}
         </div>
     )
 }

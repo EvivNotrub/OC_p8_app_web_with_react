@@ -1,11 +1,10 @@
 
 import './slideshow.scss'
 
-function Slideshow() {
+function Slideshow({ pictures }) {
     return (
         <div className='slideshow'>
-            <div className='slideshow__container'>
-                </div>
+            <img src={pictures[0]} className='slideshow__cover' />
         </div>
     )
 }
