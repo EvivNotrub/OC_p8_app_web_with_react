@@ -1,12 +1,22 @@
 
-import './about.scss'
+import './about.scss';
+import Banner from '../../components/banner/Banner.jsx';
+import banner from '../../assets/banner2.jpg';
+import AccordionComponent from '../../components/accordion/Accordion.jsx';
+import about from '../../data/aboutKasa.json';
+
 
 
 function About() {
     return (
-        <div>
-            <h1>A Propos  🧮</h1>
-        </div>
+        <main className='about__main'>
+            <Banner image={banner}/>
+            <div className='about__main__moto'>
+                {about.map(({id, title, description}) => 
+                    (<AccordionComponent key={id} type={title} datas={description}/>)
+                )}
+            </div>
+        </main>
     )
 }
 

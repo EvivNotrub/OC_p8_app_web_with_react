@@ -12,6 +12,11 @@
     background-color: #F6F6F6;
     border-radius: 25px;
     margin: auto;
+    overflow: hidden;
+    @media (max-width: 950px) {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
     &__card {
         position: relative;
         display: block;

@@ -11,10 +11,12 @@
     color: #FFFFFF;
     font-weight: 500;
     font-size: 48px;
-    background: center / cover url(../../assets/banner.jpg);
     z-index: 1;
     overflow: hidden;
     font-family: 'Montserrat';
+    &__img {
+        object-fit: cover;
+    }
     &::after {
         content: "";
         position: absolute;
@@ -24,7 +26,19 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.2);
-        z-index: -1;
+        z-index: 2;
+    }
+    &__title {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        margin: 0;
+        @media (max-width: 800px) {
+            font-size: 30px;
+        }
     }
 }
 

@@ -1,9 +1,10 @@
 import './banner.scss'
 
-function Banner() {
+function Banner({ image, title }) {
     return (
         <h1 className='banner'>
-            Chez vous, partout et ailleurs
+            <img className='banner__img' src={image} alt="photo d'un paysage" />
+            {title && <span className='banner__title'>{title}</span>}
         </h1>
     )
     }

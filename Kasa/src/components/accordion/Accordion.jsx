@@ -20,9 +20,9 @@ function AccordionComponent({ type, datas}) {
                     </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel className='accordion__content'>
-                    {type === "Description" ? <p>{datas}</p> : (<ul>
+                    {type === "Équipements" ? (<ul>
                         {datas.map((data, index) => <li key={data + index}>{data}</li>)}
-                    </ul>)}
+                    </ul>) : <p>{datas}</p> }
                 </AccordionItemPanel>
             </AccordionItem>            
         </Accordion>
