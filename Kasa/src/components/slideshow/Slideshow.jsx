@@ -1,10 +1,20 @@
 
-import './slideshow.scss'
+import './slideshow.scss';
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/scss/image-gallery.scss";
+
 
 function Slideshow({ pictures }) {
+    const photos = pictures.map((picture) => {
+        return {
+            original: picture,
+            thumbnail: picture,
+        }
+    })
+
     return (
         <div className='slideshow'>
-            <img src={pictures[0]} className='slideshow__cover' />
+            <ImageGallery items={photos} showThumbnails={false} autoPlay={false}/>
         </div>
     )
 }

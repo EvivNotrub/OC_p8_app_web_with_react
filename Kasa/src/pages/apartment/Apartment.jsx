@@ -11,7 +11,6 @@ function Apartment() {
 const { apartName } = useParams();
 
 const accommodation = accommodations.find(({ title }) => title === apartName);
-console.log(accommodation);
 return (
         <main className='accommodation'>
             <Slideshow pictures={accommodation.pictures} />
