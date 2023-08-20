@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import Slideshow from '../../components/slideshow/Slideshow.jsx';
-import Accordion from '../../components/accordion/Accordion.jsx';
+import AccordionComponent from '../../components/accordion/Accordion.jsx';
 import Owner from '../../components/owner/Owner.jsx';
 import Rating from '../../components/rating/Rating.jsx';
 import Tags from '../../components/tags/Tags.jsx';
@@ -28,8 +28,8 @@ return (
                     </div>
                 </div>
                 <div className='accommodation__infos__description'>
-                    <Accordion type="description" data={accommodation.description}/>
-                    <Accordion type="equipment" data={accommodation.equipments}/>
+                    <AccordionComponent type="Description" datas={accommodation.description}/>
+                    <AccordionComponent type="Équipements" datas={accommodation.equipments}/>
                 </div>
             </section>
         </main>
