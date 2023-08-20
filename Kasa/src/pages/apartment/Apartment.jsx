@@ -18,7 +18,7 @@ return (
                 <div className='accommodation__infos__relevant'>
                     <div className='accommodation__infos__relevant__nutshell'>
                         <h1>{apartName}</h1>
-                        <div>{accommodation.location}</div>
+                        <div className='accommodation__infos__relevant__nutshell__location'>{accommodation.location}</div>
                         <Tags tags={accommodation.tags} />
                     </div>
                     <div className='accommodation__infos__relevant__about'>

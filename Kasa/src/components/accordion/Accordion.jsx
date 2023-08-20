@@ -11,7 +11,7 @@ import arrow from '../../assets/arrow.png';
 
 function AccordionComponent({ type, datas}) {
     return (
-        <Accordion allowZeroExpanded= 'true'>
+        <Accordion className="accordionComponent" allowZeroExpanded= 'true'>
             <AccordionItem className='accordion'>
                 <AccordionItemHeading className='accordion__heading'>
                     {type}

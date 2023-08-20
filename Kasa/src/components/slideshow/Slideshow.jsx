@@ -13,9 +13,9 @@ function Slideshow({ pictures }) {
     })
 
     return (
-        <div className='slideshow'>
-            <ImageGallery items={photos} showThumbnails={false} autoPlay={false}/>
-        </div>
+        <section className='slideshow'>
+            <ImageGallery items={photos} showBullets={true} showThumbnails={false} autoPlay={false}/>
+        </section>
     )
 }
 

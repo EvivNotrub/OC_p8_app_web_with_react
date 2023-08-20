@@ -5,6 +5,9 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 12px;
+    @media (max-width: 400px) {
+        gap: 6px;
+    }
     &__star{
         display: inline-block;
         width: 22px;
@@ -12,6 +15,10 @@
         object-fit: cover;
         &-grey {
             filter: invert(97%) sepia(2%) saturate(6%) hue-rotate(327deg) brightness(94%) contrast(95%);
+        }
+        @media (max-width: 400px) {
+            width: 16px;
+            height: 16px;
         }
     }
 }

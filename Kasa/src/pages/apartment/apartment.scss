@@ -1,4 +1,58 @@
 
 .accommodation {
     color: #FF6060;
+    width: 90%;
+    margin: auto;
+    &__infos {
+        margin-top: 20px;
+        &__relevant {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+            &__nutshell {
+                width: 78%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                & h1{
+                    font-weight: 500;
+                    font-size: 36px;
+                    margin: 0;
+                    @media (max-width: 698px) {
+                        font-size: 24px;
+                    }
+                }
+                &__location {
+                    font-size: 18px;
+                    margin: 0;
+                }
+            }
+            &__about {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                @media (max-width: 1060px) {
+                    width: 100%;
+                    flex-direction: row-reverse;
+                    gap: 10px;
+                }
+            }
+        }
+        &__description {
+            width: 100%;
+            display: flex;
+            gap: 6vw;
+            @media (max-width: 1060px) {
+                flex-direction: column;
+                gap: 30px;
+            }
+            & .accordionComponent {
+                width: 100%;
+            }
+        }
+    }
 }
