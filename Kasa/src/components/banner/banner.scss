@@ -15,6 +15,7 @@
     overflow: hidden;
     font-family: 'Montserrat';
     &__img {
+        width: 100%;
         object-fit: cover;
     }
     &::after {
