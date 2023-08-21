@@ -13,6 +13,9 @@
   margin: 0 auto;
   gap: 50px;
   text-align: center;
+  @media (max-width: 800px) {
+    width: 98%;
+  }
 }
 
 // .logo {
