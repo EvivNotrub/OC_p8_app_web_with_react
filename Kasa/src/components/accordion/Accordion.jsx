@@ -1,32 +1,35 @@
 import './accordion.scss';
-import {
-    Accordion ,
-    AccordionItem,
-    AccordionItemHeading,
-    AccordionItemButton,
-    AccordionItemPanel,
-} from 'react-accessible-accordion';
 import arrow from '../../assets/arrow.png';
 
+import { useState } from 'react';
 
-function AccordionComponent({ type, datas}) {
+
+function Accordion2({ type, datas}) {
+
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <Accordion className="accordionComponent" allowZeroExpanded= 'true'>
-            <AccordionItem className='accordion'>
-                <AccordionItemHeading className='accordion__heading'>
-                    {type}
-                    <AccordionItemButton className='accordion__button'>
-                        <img className='accordion__button__arrow' src={arrow} alt="image of an arrow as button for accordion" />
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel className='accordion__content'>
-                    {type === "Équipements" ? (<ul>
-                        {datas.map((data, index) => <li key={data + index}>{data}</li>)}
-                    </ul>) : <p>{datas}</p> }
-                </AccordionItemPanel>
-            </AccordionItem>            
-        </Accordion>
+        <div className="accordion2-container">
+            <div className="accordion2">
+                <div className="accordion2__header">
+                    <h3 className="accordion2__header__title">{type}</h3>
+                    <button onClick={() => setIsOpen(!isOpen)} className="accordion2__header__button" aria-expanded={isOpen ? 'true' : 'false'}>
+                        <img className='accordion2__header__button__arrow' src={arrow} alt="image of an arrow as button for accordion" />
+                    </button>
+                </div>
+                <div className="accordion2__content" aria-expanded={isOpen ? 'true' : 'false'} >
+                    {
+                        isOpen && (
+                            type === "Équipements" ? (
+                                <ul className="accordion2__content__data --acc-list">
+                                    {datas.map((data, index) => <li key={data + index}>{data}</li>)}
+                                </ul>) : <p className="accordion2__content__data">{datas}</p>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
     )
 }
 
-export default AccordionComponent
+export default Accordion2
