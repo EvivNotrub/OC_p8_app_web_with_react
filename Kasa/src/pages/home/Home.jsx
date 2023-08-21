@@ -1,6 +1,6 @@
 import './home.scss';
 import Banner from '../../components/banner/Banner.jsx';
-import AppartmentCards from '../../components/appartmentcards/AppartmentCard.jsx';
+import AppartmentCards from '../../components/appartmentcards/AppartmentCards.jsx';
 import banner from '../../assets/banner.jpg';
 
 function Home() {

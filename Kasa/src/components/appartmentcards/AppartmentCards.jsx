@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import  accommodations  from '../../data/logements.json';
-import './appartmentCard.scss';
+import './appartmentCards.scss';
 
 
 function AppartmentCards() {

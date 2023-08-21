@@ -1,0 +1,86 @@
+
+
+.accordion2 {
+    &-container {
+        width: 100%;
+    }
+    margin-bottom: -52px; // to compensate for the content padding added to the top
+                          // and moved with position relative + top: -52px;
+    position: relative;
+    &__header {
+        position: relative;
+        box-sizing: border-box;
+        height: 52px;
+        border-radius: 10px;
+        padding: 5px 10px 5px 10px;
+        color: white;
+        background-color: #FF6060;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        &__title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0;
+        }
+        @media (max-width: 698px) {
+            font-size: 13px;
+        }
+        &__button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            z-index: 2;
+            &__arrow {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translate(0%, -50%);
+                display: block;
+                content: '';
+                margin-right: 12px;
+            }
+            &[aria-expanded='true'] img {
+            //, &[aria-selected='true'] img {
+                transform: rotate(180deg) translate(0%, 25%);
+            }
+        }
+    }
+    
+    &__content {
+        position: relative;
+        top: -52px;
+        padding: 52px 0 0 0 ;
+        background-color: #F6F6F6;
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: #FF6060;
+        // transform: scaleY(0);
+        @media (max-width: 698px) {
+            font-size: 13px;
+        }
+        &__data{
+            margin: 0;
+            padding: 20px 15px;
+            &.--acc-list {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    }    
+}
