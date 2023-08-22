@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import Slideshow2 from '../../components/slideshow2/Slideshow2.jsx';
+import Slideshow from '../../components/slideshow/Slideshow.jsx';
 import Accordion from '../../components/accordion/Accordion.jsx';
 import Owner from '../../components/owner/Owner.jsx';
 import Rating from '../../components/rating/Rating.jsx';
@@ -13,7 +13,7 @@ const { apartName } = useParams();
 const accommodation = accommodations.find(({ title }) => title === apartName);
 return (
         <main className='accommodation'>
-            <Slideshow2 pictures={accommodation.pictures} />
+            <Slideshow pictures={accommodation.pictures} />
             <section className='accommodation__infos'>
                 <div className='accommodation__infos__relevant'>
                     <div className='accommodation__infos__relevant__nutshell'>
