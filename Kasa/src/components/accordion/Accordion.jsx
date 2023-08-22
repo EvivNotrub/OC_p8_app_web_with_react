@@ -3,20 +3,29 @@ import arrow from '../../assets/arrow.png';
 import { useState } from 'react';
 
 
-function Accordion2({ type, datas}) {
+function Accordion({ type, datas}) {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isExpanded, setIsExpanded] = useState(false);
+    const delay = 270;
 
     return (
         <div className="accordion2-container">
             <div className="accordion2">
                 <div className="accordion2__header">
                     <h3 className="accordion2__header__title">{type}</h3>
-                    <button onClick={() => setIsOpen(!isOpen)} className="accordion2__header__button" aria-expanded={isOpen ? 'true' : 'false'}>
+                    <button
+                        onClick={() => {
+                                !isOpen ? (setIsOpen(true), setIsExpanded(true)) : (setIsExpanded(false),(setTimeout(() => setIsOpen(false), delay)));
+                            }
+                        }
+                        className="accordion2__header__button"
+                        aria-expanded={isExpanded ? 'true' : 'false'}
+                    >
                         <img className='accordion2__header__button__arrow' src={arrow} alt="image of an arrow as button for accordion" />
                     </button>
                 </div>
-                <div className="accordion2__content" aria-expanded={isOpen ? 'true' : 'false'} >
+                <div className="accordion2__content" aria-expanded={isExpanded ? 'true' : 'false'} >
                     {
                         isOpen && (
                             type === "Équipements" ? (
@@ -31,4 +40,4 @@ function Accordion2({ type, datas}) {
     )
 }
 
-export default Accordion2
+export default Accordion
