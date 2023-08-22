@@ -7,7 +7,7 @@ function Accordion({ type, datas}) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
-    const delay = 270;
+    const delay = 270; // delay in ms to wait for the transition to end - match with transition in scss line 70 
 
     return (
         <div className="accordion2-container">

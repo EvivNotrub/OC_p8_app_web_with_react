@@ -7,7 +7,8 @@ function Slideshow({ pictures }) {
 
     const [isDirection, setIsDirection] = useState('');
     const [isClicked, setIsClicked] = useState(false);
-    const delay = 280;
+    const delay = 305; // delay in ms to wait for the transition to end - match with transition in scss line 26 & 30.
+    // carefull: too long and the user will have to wait to click again.
 
     const [currentPicture, setCurrentPicture] = useState(0);
     const [previousPicture, setPreviousPicture] = useState(pictures.length - 1);
