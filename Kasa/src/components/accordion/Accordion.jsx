@@ -1,6 +1,5 @@
 import './accordion.scss';
 import arrow from '../../assets/arrow.png';
-
 import { useState } from 'react';
 
 

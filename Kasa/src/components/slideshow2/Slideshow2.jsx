@@ -4,15 +4,15 @@ import ButtonSlider from './ButtonSlider.jsx';
 
 
 function Slideshow2({ pictures }) {
+
     const [isDirection, setIsDirection] = useState('');
     const [isClicked, setIsClicked] = useState(false);
+    const delay = 280;
 
     const [currentPicture, setCurrentPicture] = useState(0);
     const [previousPicture, setPreviousPicture] = useState(pictures.length - 1);
     const [nextPicture, setNextPicture] = useState(1);
     const picturesLength = pictures.length;
-    const delay = 1000;
-
 
     function updatePictures(direction) {
         if (direction === 'next') {
@@ -41,12 +41,11 @@ function Slideshow2({ pictures }) {
             }    
             { pictures.map((picture, index) => {
                     return (
-                        index === previousPicture && <img key={picture.slice(-10, -4)} className={'slideshow2__picture --previous' + (isClicked ? (' --' + isDirection) : '')} src={pictures[previousPicture]} alt={'image du logement numéro ' + ( previousPicture + 1)} />
-                        || index === currentPicture && <img  key={picture.slice(-10,-4)} className={'slideshow2__picture' + (isClicked ? (' --' + isDirection) : '')} src={pictures[currentPicture]} alt={'image du logement numéro ' + ( currentPicture + 1)} />
+                        index === currentPicture && <img  key={picture.slice(-10,-4)} className={'slideshow2__picture' + (isClicked ? (' --' + isDirection) : '')} src={pictures[currentPicture]} alt={'image du logement numéro ' + ( currentPicture + 1)} />
+                        || index === previousPicture && <img key={picture.slice(-10, -4)} className={'slideshow2__picture --previous' + (isClicked ? (' --' + isDirection) : '')} src={pictures[previousPicture]} alt={'image du logement numéro ' + ( previousPicture + 1)} />
                         || index === nextPicture && <img key={picture.slice(-10,-4)} className={'slideshow2__picture --next' + (isClicked ? (' --' + isDirection) : '')} src={pictures[nextPicture]} alt={'image du logement numéro ' + ( nextPicture + 1)} />
                     )})   
-            }            
-            
+            }  
             { picturesLength > 1 &&
                 <div className='slideshow2__count'>
                     {(isClicked ? (isDirection === 'moveLeft' ? nextPicture : previousPicture) : (currentPicture)) + '/' + picturesLength}

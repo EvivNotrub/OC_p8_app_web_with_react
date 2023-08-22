@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import Slideshow from '../../components/slideshow/Slideshow.jsx';
 import Slideshow2 from '../../components/slideshow2/Slideshow2.jsx';
 import Accordion from '../../components/accordion/Accordion.jsx';
 import Owner from '../../components/owner/Owner.jsx';
@@ -14,7 +13,6 @@ const { apartName } = useParams();
 const accommodation = accommodations.find(({ title }) => title === apartName);
 return (
         <main className='accommodation'>
-            <Slideshow pictures={accommodation.pictures} />
             <Slideshow2 pictures={accommodation.pictures} />
             <section className='accommodation__infos'>
                 <div className='accommodation__infos__relevant'>

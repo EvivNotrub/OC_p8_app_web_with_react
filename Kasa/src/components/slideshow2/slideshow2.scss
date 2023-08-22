@@ -23,11 +23,11 @@
         }
         &.--moveLeft {
             transform: translateX(-100%);
-            transition: transform 0.35s ease-in-out;
+            transition: transform 0.28s ease-in-out;
         }
         &.--moveRight {
             transform: translateX(100%);
-            transition: transform 0.35s ease-in-out;
+            transition: transform 0.28s ease-in-out;
         }
     }
     &__count {

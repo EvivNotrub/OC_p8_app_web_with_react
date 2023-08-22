@@ -26,9 +26,7 @@ function ButtonSlider({ delay, setIsDirection, setIsClicked, next, previous }) {
                 className='buttonSlider__arrow --right'>
             </button>
         </div>
-
     )
 }
-
 
 export default ButtonSlider
