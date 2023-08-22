@@ -11,15 +11,23 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
+        width: 100%;
         height: 415px;
         object-fit: cover;
         z-index: -1;
         &.--previous {
-            transform: translateX(-90%);
+            left: -100%;
         }
         &.--next {
+            left: 100%; 
+        }
+        &.--moveLeft {
+            transform: translateX(-100%);
+            transition: transform 0.35s ease-in-out;
+        }
+        &.--moveRight {
             transform: translateX(100%);
+            transition: transform 0.35s ease-in-out;
         }
     }
     &__count {
