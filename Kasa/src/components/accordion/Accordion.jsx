@@ -1,22 +1,21 @@
 import './accordion.scss';
+import AccordionContent from './AccordionContent.jsx';
 import arrow from '../../assets/arrow.png';
 import { useState } from 'react';
 
 
-function Accordion({ type, datas}) {
+function Accordion({ title, datum}) {
 
-    const [isOpen, setIsOpen] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
-    const delay = 270; // delay in ms to wait for the transition to end - match with transition in scss line 70 
 
     return (
         <div className="accordion2-container">
             <div className="accordion2">
                 <div className="accordion2__header">
-                    <h3 className="accordion2__header__title">{type}</h3>
+                    <h3 className="accordion2__header__title">{title}</h3>
                     <button
                         onClick={() => {
-                                !isOpen ? (setIsOpen(true), setIsExpanded(true)) : (setIsExpanded(false),(setTimeout(() => setIsOpen(false), delay)));
+                                !isExpanded ? ( setIsExpanded(true)) : (setIsExpanded(false));
                             }
                         }
                         className="accordion2__header__button"
@@ -26,14 +25,7 @@ function Accordion({ type, datas}) {
                     </button>
                 </div>
                 <div className="accordion2__content" aria-expanded={isExpanded ? 'true' : 'false'} >
-                    {
-                        isOpen && (
-                            type === "Équipements" ? (
-                                <ul className="accordion2__content__data --acc-list">
-                                    {datas.map((data, index) => <li key={data + index}>{data}</li>)}
-                                </ul>) : <p className="accordion2__content__data">{datas}</p>
-                        )
-                    }
+                    {<AccordionContent title={title} datum={datum} />}
                 </div>
             </div>
         </div>

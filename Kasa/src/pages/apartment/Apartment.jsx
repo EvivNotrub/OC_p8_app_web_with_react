@@ -60,8 +60,8 @@ function Apartment() {
                       </div>
                   </div>
                   <div className='accommodation__infos__description'>
-                      <Accordion type="Description" datas={accommodation.description}/>
-                      <Accordion type="Équipements" datas={accommodation.equipments}/>
+                      <Accordion title='Description' datum={accommodation.description}/>
+                      <Accordion title='Équipements' datum={accommodation.equipments}/>
                   </div>
               </section>
           </main>

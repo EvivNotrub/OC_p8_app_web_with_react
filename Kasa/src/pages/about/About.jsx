@@ -13,7 +13,7 @@ function About() {
             <Banner image={banner}/>
             <div className='about__main__moto'>
                 {about.map(({id, title, description}) => 
-                    (<AccordionComponent key={id} type={title} datas={description}/>)
+                    (<AccordionComponent key={id} title={title} datum={description}/>)
                 )}
             </div>
         </main>
