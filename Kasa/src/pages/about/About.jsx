@@ -5,9 +5,9 @@ import banner from '../../assets/banner2.jpg';
 import AccordionComponent from '../../components/accordion/Accordion.jsx';
 import about from '../../data/aboutKasa.json';
 
-
-
 function About() {
+    document.title = "Kasa A propos";
+    
     return (
         <main className='about__main'>
             <Banner image={banner}/>

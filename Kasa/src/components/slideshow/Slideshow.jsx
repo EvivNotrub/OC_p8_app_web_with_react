@@ -42,14 +42,14 @@ function Slideshow({ pictures }) {
             }    
             { pictures.map((picture, index) => {
                     return (
-                        index === currentPicture && <img  key={picture.slice(-10,-4)} className={'slideshow__picture' + (isClicked ? (' --' + isDirection) : '')} src={pictures[currentPicture]} alt={'image du logement numéro ' + ( currentPicture + 1)} />
-                        || index === previousPicture && <img key={picture.slice(-10, -4)} className={'slideshow__picture --previous' + (isClicked ? (' --' + isDirection) : '')} src={pictures[previousPicture]} alt={'image du logement numéro ' + ( previousPicture + 1)} />
-                        || index === nextPicture && <img key={picture.slice(-10,-4)} className={'slideshow__picture --next' + (isClicked ? (' --' + isDirection) : '')} src={pictures[nextPicture]} alt={'image du logement numéro ' + ( nextPicture + 1)} />
+                        index === currentPicture && <img  key={picture + index} className={'slideshow__picture' + (isClicked ? (' --' + isDirection) : '')} src={pictures[currentPicture]} alt={'image du logement numéro ' + ( currentPicture + 1)} />
+                        || index === previousPicture && <img key={picture + index} className={'slideshow__picture --previous' + (isClicked ? (' --' + isDirection) : '')} src={pictures[previousPicture]} alt={'image du logement numéro ' + ( previousPicture + 1)} />
+                        || index === nextPicture && <img key={picture + index} className={'slideshow__picture --next' + (isClicked ? (' --' + isDirection) : '')} src={pictures[nextPicture]} alt={'image du logement numéro ' + ( nextPicture + 1)} />
                     )})   
             }  
             { picturesLength > 1 &&
                 <div className='slideshow__count'>
-                    {(isClicked ? (isDirection === 'moveLeft' ? nextPicture : previousPicture) : (currentPicture)) + '/' + picturesLength}
+                    {(isClicked ? (isDirection === 'moveLeft' ? (nextPicture + 1 ) : (previousPicture + 1)) : (currentPicture + 1)) + '/' + picturesLength}
                 </div> }
         </section>
 

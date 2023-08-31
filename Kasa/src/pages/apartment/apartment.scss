@@ -1,8 +1,12 @@
 
+
 .accommodation {
     color: #FF6060;
     width: 90%;
     margin: auto;
+    &__loading {
+        font-size: calc((1vh + 1vw + 0.5vmin) * 4);
+    }
     &__infos {
         margin-top: 20px;
         &__relevant {
@@ -40,9 +44,6 @@
                     flex-direction: row-reverse;
                     flex-wrap: wrap;
                     gap: 10px;
-                    & * {
-                        margin: auto;
-                    }
                 }
             }
         }

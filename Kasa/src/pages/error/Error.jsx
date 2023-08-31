@@ -1,9 +1,10 @@
 import './error.scss'
 import { Link } from 'react-router-dom'
 
-
-
 function Error() {
+
+    document.title = "Kasa page introuvable";
+
     return (
         <main className="error__main">
             <h1 className='error__main__title'>404</h1>
