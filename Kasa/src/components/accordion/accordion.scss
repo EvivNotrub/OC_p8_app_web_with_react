@@ -67,12 +67,14 @@
         color: #FF6060;
         transform: scaleY(0);
         transform-origin: top;
-        transition: transform 0.28s ease-in-out;
+        height: 0;
+        transition: all 0.28s ease-in-out;
         @media (max-width: 698px) {
             font-size: 13px;
         }
         &[aria-expanded='true'] {
             transform: scaleY(1);
+            height: 100%;
         }
         &__data{
             margin: 0;

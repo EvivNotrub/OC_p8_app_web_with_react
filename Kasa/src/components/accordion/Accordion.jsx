@@ -16,8 +16,7 @@ function Accordion({ title, datum}) {
                     <button
                         onClick={() => {
                                 !isExpanded ? ( setIsExpanded(true)) : (setIsExpanded(false));
-                            }
-                        }
+                            }}
                         className="accordion2__header__button"
                         aria-expanded={isExpanded ? 'true' : 'false'}
                     >
