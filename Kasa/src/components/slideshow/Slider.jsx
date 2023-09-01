@@ -1,24 +1,24 @@
 
 
-function Slider({pictures, currentPicture, previousPicture, nextPicture}){
+function Slider({pictures, currentPicture, previousPicture, nextPicture, classFullscreen}){
     return(
-        pictures.map((picture, index) => {
+            pictures.map((picture, index) => {
 
-            let position;
-            switch (index){
-                case currentPicture : position = " --current";
-                break;
-                case nextPicture : position = " --next";
-                break;
-                case previousPicture : position = " --previous";
-                break;
-                default : position = '';
-            }
+                let position;
+                switch (index){
+                    case currentPicture : position = " --current";
+                    break;
+                    case nextPicture : position = " --next";
+                    break;
+                    case previousPicture : position = " --previous";
+                    break;
+                    default : position = '';
+                }
 
-            return (
-                <img  key={picture + index} className={'slideshow__picture' + position } id={index} src={picture} alt={'image du logement numéro ' + ( index + 1)} />
-            )
-        })
+                return (
+                    <img  key={picture + index} className={'slideshow__picture' + position + classFullscreen } id={index} src={picture} alt={'image du logement numéro ' + ( index + 1)} />
+                )
+            })
     )
 }
 
