@@ -1,17 +1,12 @@
 import './buttonSlider.scss';
 
 
-function ButtonSlider({ delay, setIsDirection, setIsClicked, next, previous }) {
+function ButtonSlider({ next, previous }) {
     return (
         <div className='buttonSlider'>
             <button type='button' 
                 onClick={ () => {
-                    setIsClicked(true)
-                    setIsDirection('moveRight')
-                    setTimeout(() => {
-                        previous();
-                        setIsClicked(false)
-                    }, delay)
+                    previous();
                 }}
                 className='buttonSlider__arrow --left'>
                     <svg className='svg' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
@@ -21,12 +16,7 @@ function ButtonSlider({ delay, setIsDirection, setIsClicked, next, previous }) {
             </button>
             <button type='button'
                 onClick={() => {
-                    setIsClicked(true)
-                    setIsDirection('moveLeft')
-                    setTimeout(() => {
-                        next();
-                        setIsClicked(false)
-                    }, delay)
+                    next();
                 }}
                 className='buttonSlider__arrow --right'>
                 <svg className='svg' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
