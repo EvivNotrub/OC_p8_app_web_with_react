@@ -1,5 +1,5 @@
 import './slideshow.scss';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ButtonSlider from './ButtonSlider.jsx';
 import Slider from './Slider.jsx'
 import FullscreenButton from './FullscreenButton.jsx';
@@ -11,6 +11,17 @@ function Slideshow({ pictures, isFullscreen, setIsFullscreen, classFullscreen })
     const [previousPicture, setPreviousPicture] = useState(pictures.length - 1);
     const [nextPicture, setNextPicture] = useState(1);
     const picturesLength = pictures.length;
+
+    useEffect(()=>{
+        document.addEventListener('keydown', (e) => {
+         if( e.key === 'Escape' && isFullscreen){
+          setIsFullscreen(false)
+         }
+        })
+        return () => {
+          document.removeEventListener('keydown', (e) => e)
+        }
+      },[isFullscreen])
 
     function updatePictures(direction) {
         if (direction === 'next') {

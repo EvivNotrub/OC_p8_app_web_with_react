@@ -17,6 +17,8 @@ function Apartment() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const classFullscreen = isFullscreen ? ' --fullscreen' : ' --normalview';
 
+
+
   const myFunction = (_id) => {
     const myData = accommodations.find(({ id }) => id === _id);
     if (myData) {
