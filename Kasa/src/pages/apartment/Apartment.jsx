@@ -14,6 +14,8 @@ function Apartment() {
   const { apartId } = useParams();
   const [accommodation, setAccommodation] = useState(null);
   const [isLoading, setLoading] = useState(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const classFullscreen = isFullscreen ? ' --fullscreen' : ' --normalview';
 
   const myFunction = (_id) => {
     const myData = accommodations.find(({ id }) => id === _id);
@@ -45,8 +47,13 @@ function Apartment() {
   }
 
   return (
-          <main className='accommodation'>
-              <Slideshow pictures={accommodation.pictures} />
+          <main className={'accommodation' + classFullscreen}>
+              <Slideshow
+                pictures={accommodation.pictures}
+                isFullscreen={isFullscreen}
+                setIsFullscreen={setIsFullscreen}
+                classFullscreen={classFullscreen}
+              />
               <section className='accommodation__infos'>
                   <div className='accommodation__infos__relevant'>
                       <div className='accommodation__infos__relevant__nutshell'>

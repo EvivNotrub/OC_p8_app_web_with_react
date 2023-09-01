@@ -7,6 +7,9 @@
     overflow: hidden;
     //above you can change width and 'comment' overflow to view faded side-images + moving in and out
     margin: auto;
+    &.--fullscreen {
+        height: 90vh;
+    }
     &__picture {
         border-radius: 25px;
         position: absolute;
@@ -87,10 +90,6 @@
                 animation: bolocs 10s alternate infinite;
             }
         }
-    }
-    &.--fullscreen {
-        height: 100vh;
-        object-fit: cover;
     }
 }
 @keyframes bolocs {
