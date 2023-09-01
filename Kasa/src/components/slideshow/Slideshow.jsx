@@ -1,6 +1,7 @@
 import './slideshow.scss';
 import { useState } from "react";
 import ButtonSlider from './ButtonSlider.jsx';
+import Slider from './Slider.jsx'
 
 
 function Slideshow({ pictures }) {
@@ -22,34 +23,19 @@ function Slideshow({ pictures }) {
         }
     }
 
-
     return (
         <section className='slideshow'>
-            { picturesLength > 1 && (                
-                    <div className='slideshow__arrows'>
+            { picturesLength > 1 && (
                         <ButtonSlider
                             next={() => { updatePictures('next')}}
                             previous={() => { updatePictures({direction: 'previous'})}}
-                        />
-                    </div> )
-            }    
-            { pictures.map((picture, index) => {
-
-                let position;
-                switch (index){
-                    case currentPicture : position = " --current";
-                    break;
-                    case nextPicture : position = " --next";
-                    break;
-                    case previousPicture : position = " --previous";
-                    break;
-                    default : position = '';
-                }
-
-                    return (
-                        <img  key={picture + index} className={'slideshow__picture' + position } id={index} src={picture} alt={'image du logement numéro ' + ( index + 1)} />
-                    )})   
-            }  
+                        />) }    
+            { <Slider
+                pictures={pictures}
+                currentPicture={currentPicture}
+                previousPicture={previousPicture}
+                nextPicture={nextPicture}
+              /> }  
             { picturesLength > 1 &&
                 <div className='slideshow__count'>
                     {(currentPicture + 1) + '/' + picturesLength}
