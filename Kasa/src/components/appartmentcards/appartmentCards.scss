@@ -6,7 +6,7 @@
     padding: 50px;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
     grid-auto-rows: 1fr 1fr;
     gap: 30px;
     background-color: #F6F6F6;
@@ -16,7 +16,7 @@
         padding: 0px;
         background-color: inherit;
         border-radius: unset;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }    
     &__card {
         box-sizing: border-box;
