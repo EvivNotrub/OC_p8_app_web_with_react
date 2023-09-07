@@ -2,8 +2,8 @@
 .about__main {
     width: 90%;
     margin: auto;
-    @media (max-width: 800px) {
-        width: 98%;
+    @media (max-width: 900px) {
+        width: 95%;
     }
     &__moto {
         margin: 38px 80px 0 80px;
@@ -11,8 +11,12 @@
         flex-direction: column;
         justify-content: center;
         gap: 30px;
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
+            gap: 25px;
             margin: 38px 0 0 0;
+        }
+        @media (max-width: 599px) {
+            gap: 19px;
         }
     }
 

@@ -75,14 +75,16 @@
         font-size: 18px;
         color: #FF6060;
         transform: scaleY(0);
+        opacity: 0;
         transform-origin: top;
         height: 0;
-        transition: all 0.28s ease-in-out;
+        transition: transform 0.28s ease-in-out , opacity 0.18s ease-in 0.1s, height 0.30s;
         @media (max-width: 599px) {
             font-size: 13px;
         }
         &[aria-expanded='true'] {
             transform: scaleY(1);
+            opacity: 1;
             height: 100%;
         }
         &__data{

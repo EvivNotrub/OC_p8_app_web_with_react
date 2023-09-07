@@ -29,8 +29,15 @@
         line-height: 34px;
         text-align: center;
         margin: 0;
-        @media (max-width: 599px){
+    }
+    @media (max-width: 599px){
+        &__copyright {
             font-size: 12px;
+            width: 134px;
+            line-height: 17px;
         }
+        margin-top: 20px;
+        padding: 45px 0 40px 0;
+        gap: 10px;
     }
 }
