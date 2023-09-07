@@ -13,8 +13,9 @@
   margin: 0 auto;
   gap: 50px;
   text-align: center;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     width: 98%;
+    gap: 22px;
   }
 }
 
