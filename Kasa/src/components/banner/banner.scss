@@ -17,7 +17,9 @@
     &__img {
         width: 100%;
         object-fit: cover;
-        filter: brightness(70%) hue-rotate(10deg) saturate(155%) contrast(125%) ;
+        &.title-dim {
+            filter: brightness(70%) hue-rotate(10deg) saturate(155%) contrast(125%) ;
+        }
     }
     &__title {
         box-sizing: border-box;
