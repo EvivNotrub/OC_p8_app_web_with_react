@@ -1,8 +1,18 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To deploy on github pages, used https://www.npmjs.com/package/gh-pages
+Comments in vite.config.js and main.jsx to indicate changes. For other deployment you might need to change it.
+Further this are the added lines in package.json:
+{
+    "homepage": "https://EvivNotrub.github.io/OC_p8_app_web_with_react/",
+    scripts: {
+        "predeploy" : "npm run build",
+        "deploy" : "gh-pages -d dist",
+    }
+    "devDependencies": {
+        "gh-pages": "^6.1.0",
+  }
+}
