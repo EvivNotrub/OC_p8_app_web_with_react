@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy" : "npm run build",
+    "predeploy" : "vite build --base /OC_p8_app_web_with_react/ && cp ./dist/index.html ./dist/404.html",
     "deploy" : "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",

@@ -10,12 +10,11 @@ import Footer from './components/footer/Footer';
 import Error from './pages/error/Error.jsx';
 
 // the basename attribute is used to deploy the app on github pages,
-// for a local preview or other deployement you might want to remove it
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
   <Router
-    basename={import.meta.env.DEV ? '/' : '/OC_p8_app_web_with_react/'}
+    basename={import.meta.env.BASE_URL}
   >
     <Header/>
     <Routes>
